@@ -179,7 +179,7 @@ em {
     background-color: #252A36;
     height: 1px;
     width: 100%;
-    margin: 3rem 0rem;
+    margin: 2rem 0rem;
 }
 
 .projects-header {
@@ -206,14 +206,17 @@ em {
     box-sizing: border-box;
 }
 
-.project-card {
+.project-card, .project-card-last {
     display: flex;
     align-items: flex-start; 
     gap: 1rem;
     padding: 1.5rem 0;
-    border-bottom: 1px solid #252A36; 
     width: 100%;
     box-sizing: border-box;
+}
+
+.project-card {
+    border-bottom: 1px solid #252A36;
 }
 
 .project-number {
@@ -235,7 +238,7 @@ em {
     margin: 0;
 }
 
-.project-card .paragraph-muted {
+.project-card .paragraph-muted, .project-card-last .paragraph-muted {
     font-size: 0.85rem;
     line-height: 1.5;
     margin: 0;
@@ -247,6 +250,57 @@ em {
     line-height: 1.4;
     word-break: break-word;
     color: #8B919E;
+}
+
+.numbers-section {
+    width: 100%;
+}
+
+.numbers-header {
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.numbers-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.number-item, .number-item-last {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 1.5rem 0;
+}
+
+.number-item {
+    border-bottom: 1px solid #252A36;
+}
+
+.number-value {
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-weight: 650;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: #ECE9E4;
+}
+
+.number-description {
+    margin: 0;
+    padding: 0;
+
+    color: #8B919E;
+
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.15;
+
+    max-width: 15rem;
 }
 
 @media (min-width: 768px) {
@@ -267,6 +321,10 @@ em {
         margin: 1.5rem 0;
         font-size: 1.1rem;
     }
+
+    .break {
+        margin: 4rem 0;
+    }
     
     .project-card {
         gap: 1.5rem;
@@ -279,6 +337,34 @@ em {
     
     .project-title {
         font-size: 1.3rem;
+    }
+    
+    .numbers-header {
+        margin-bottom: 2rem;
+    }
+
+    .numbers-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    .number-item, .number-item-last {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .number-value {
+        font-size: clamp(2rem, 3vw, 3.5rem);
+        margin-bottom: 0.4rem;
+    }
+
+    .number-description {
+        font-size: 0.85rem;
+        max-width: 15rem;
     }
 }
 
