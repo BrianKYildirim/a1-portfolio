@@ -1,5 +1,5 @@
 const content = document.getElementById("content");
-const navLinks = document.querySelectorAll("div a[data-page]");
+const navLinks = document.querySelectorAll(".navbar a[data-page]");
 
 async function loadPage(page) {
     const response = await fetch(`pages/${page}.html`);
@@ -20,13 +20,18 @@ function updateActiveNavLink(activePage) {
     });
 }
 
-navLinks.forEach(link => {
-    link.addEventListener("click", event => {
-        event.preventDefault();
+document.addEventListener("click", event => {
+    const link = event.target.closest("a[data-page]");
 
-        const page = link.dataset.page;
-        loadPage(page);
-    });
+    if (!link) {
+        return;
+    }
+
+    event.preventDefault();
+
+    const page = link.dataset.page;
+    loadPage(page);
 });
+
 
 loadPage("about");
