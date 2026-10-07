@@ -7,7 +7,7 @@ async function loadPage(page) {
     content.innerHTML = html;
 }
 
-document.querySelectorAll("nav a[data-page]").forEach(link => {
+document.querySelectorAll("div a[data-page]").forEach(link => {
     link.addEventListener("click", event => {
         event.preventDefault();
 

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lexend:wght@100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    
+    margin: 0;
+    padding: 0;
+
+    background-color: #12131C;
+    color: #FFFFFF;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+header.navbar {
+    width: 90%;
+    margin-inline: auto;
+}
+
+main#content {
+    padding: 1%;
+    flex: 1 0 auto;
+}
+
+div.nav {
+    background-color: #1E2030;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 0.5rem;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    border-radius: 0.75rem;
+}
+
+footer {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: #1E2030;
+    color: #FFFFFF;
+    
+}
+
+a.navbar-link, a.footer-link {
+    padding-left: 2%;
+}
+
+a:link, a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.accent {
+    color: #F59E0B;
+}
+
+em {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+  header.navbar {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1600px) {
+  header.navbar {
+    width: 20%;
+    margin-top: 1rem;
+  }
+}
