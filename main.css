@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&display=swap');
 
 body {
+    cursor: url('static/customcursor.png'), auto;
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
@@ -54,7 +55,24 @@ body {
 a:link, a:visited {
     color: #ECE9E4;
     text-decoration: none;
+    cursor: url('static/customcursor.png'), auto;
 }
+
+a.accent-button:link, a.accent-button:visited {
+    color: #0F1117;
+    cursor: url('static/customcursor1.png'), auto;
+}
+
+a.normal-button:link, a.normal-button:visited {
+    color: #ECE9E4;
+    cursor: url('static/customcursor.png'), auto;
+}
+
+a.all-projects-link:link, a.all-projects-link:visited {
+    color: #F59E0B;
+    cursor: url('static/customcursor.png'), auto;
+}
+
 
 .navbar-link.active {
     color: #F59E0B;
@@ -115,6 +133,11 @@ em {
 }
 
 .accent-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
     background-color: #F59E0B;
     border: 1px solid #252A36;
     color: #0F1117;
@@ -123,13 +146,17 @@ em {
     width: 8rem;
 
     font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
     font-size: 0.8rem;
+    cursor: url('static/customcursor1.png'), auto;
 }
 
 .normal-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
     background-color: #0F1117;
     border: 1px solid #252A36;
     color: #ECE9E4;
@@ -138,10 +165,9 @@ em {
     width: 5rem;
 
     font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
     font-size: 0.8rem;
+    cursor: url('static/customcursor.png'), auto;
 }
 
 .signal-button {
