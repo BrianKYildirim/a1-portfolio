@@ -11,8 +11,115 @@
 
 <body>
     <section>
-        <h1 class="header-name">Coming soon</h1>
-        <h2 class="accent larger-h2">Stay tuned, this section is currently under construction!</h2>
+        <header class="coursework-header">
+            <p class="coursework-eyebrow mono">Education · UC Irvine</p>
+            <h1 class="projects-page-title">Coursework</h1>
+            <p class="projects-page-description">The classes behind how I design, test and reason about software, and the projects where I put them to work.</p>
+        </header>
+    
+        <div class="coursework-group">
+            <div class="coursework-group-header">
+                <p class="coursework-group-label mono">01 — Building software</p>
+                <p class="coursework-group-note">How I structure, test and run code.</p>
+            </div>
+    
+            <div class="coursework-grid">
+                <article class="course-card">
+                    <span class="course-special">O(log n)</span>
+                    <h2 class="course-title">Data Structures &amp; Algorithms</h2>
+                    <p class="course-description">Picking the right structure for the job and proving it's fast enough. This is the course behind the performance numbers on this site.</p>
+                    <ul class="course-topics mono">
+                        <li>Trees &amp; heaps</li>
+                        <li>Graphs</li>
+                        <li>Hashing</li>
+                        <li>Dynamic programming</li>
+                        <li>Big-O</li>
+                    </ul>
+                    <p class="course-applied">
+                        <span class="course-applied-label mono">Applied in</span>
+                        <a href="#projects" data-page="projects" class="course-link">Enchantment Calculator</a>
+                        <a href="#projects" data-page="projects" class="course-link">Rate Limiter</a>
+                    </p>
+                </article>
+    
+                <article class="course-card">
+                    <span class="course-special">assert</span>
+                    <h2 class="course-title">Software Testing</h2>
+                    <p class="course-description">Writing tests that catch real bugs, not just raise coverage: unit and integration tests, test design, and keeping it all running in CI.</p>
+                    <ul class="course-topics mono">
+                        <li>Unit &amp; integration</li>
+                        <li>Test design</li>
+                        <li>Coverage</li>
+                        <li>CI</li>
+                    </ul>
+                    <p class="course-applied">
+                        <span class="course-applied-label mono">Applied in</span>
+                        <a href="#projects" data-page="projects" class="course-link">StrivoAI</a>
+                        <a href="#projects" data-page="projects" class="course-link">Rate Limiter</a>
+                    </p>
+                </article>
+    
+                <article class="course-card">
+                    <span class="course-special">fork()</span>
+                    <h2 class="course-title">Systems Engineering</h2>
+                    <p class="course-description">How programs behave underneath: processes, memory, concurrency and I/O, and how to keep shared state safe.</p>
+                    <ul class="course-topics mono">
+                        <li>Threads</li>
+                        <li>Concurrency</li>
+                        <li>Memory</li>
+                        <li>Sockets</li>
+                    </ul>
+                    <p class="course-applied">
+                        <span class="course-applied-label mono">Applied in</span>
+                        <a href="#projects" data-page="projects" class="course-link">Key-Value Server</a>
+                    </p>
+                </article>
+    
+                <article class="course-card">
+                    <span class="course-special">class</span>
+                    <h2 class="course-title">Object-Oriented Programming</h2>
+                    <p class="course-description">Designing around clear interfaces, encapsulation and composition so code stays easy to extend and test.</p>
+                    <ul class="course-topics mono">
+                        <li>Interfaces</li>
+                        <li>Composition</li>
+                        <li>Design patterns</li>
+                    </ul>
+                    <p class="course-applied">
+                        <span class="course-applied-label mono">Applied in</span>
+                        <a href="#projects" data-page="projects" class="course-link">Rate Limiter</a>
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="coursework-group">
+            <div class="coursework-group-header">
+                <p class="coursework-group-label mono">02 — Math &amp; data</p>
+                <p class="coursework-group-note">The foundations under the algorithms.</p>
+            </div>
+    
+            <div class="coursework-grid coursework-grid-compact">
+                <article class="course-card course-card-compact">
+                    <span class="course-special">p &lt; .05</span>
+                    <h2 class="course-title">Statistical Data Analysis</h2>
+                    <p class="course-description">Distributions, hypothesis tests and regression.</p>
+                </article>
+    
+                <article class="course-card course-card-compact">
+                    <span class="course-special">Ax = b</span>
+                    <h2 class="course-title">Linear Algebra</h2>
+                    <p class="course-description">Vectors, matrices and transformations, the math underneath image processing and ML.</p>
+                </article>
+    
+                <article class="course-card course-card-compact">
+                    <span class="course-special">∀x ∃y</span>
+                    <h2 class="course-title">Discrete Math</h2>
+                    <p class="course-description">Logic, proofs, combinatorics and graph theory: how to reason about whether an algorithm is correct.</p>
+                </article>
+            </div>
+    
+            <p class="coursework-also mono">Also completed: Calculus II</p>
+        </div>
     </section>
 </body>
     
