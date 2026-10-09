@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&display=swap');
 
 body {
-    cursor: url('static/customcursor.png'), auto;
+    cursor: url('../static/customcursor.png'), auto;
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
@@ -43,7 +43,7 @@ body {
     flex-wrap: wrap; 
     justify-content: center;
     gap: 0.85rem; 
-    font-size: .8rem;
+    font-size: .75rem;
     padding: 0;
 }
 
@@ -55,27 +55,31 @@ body {
 a:link, a:visited {
     color: #ECE9E4;
     text-decoration: none;
-    cursor: url('static/customcursor.png'), auto;
+    cursor: url('../static/customcursor.png'), auto;
 }
 
 a.accent-button:link, a.accent-button:visited {
     color: #0F1117;
-    cursor: url('static/customcursor1.png'), auto;
+    cursor: url('../static/customcursor1.png'), auto;
 }
 
 a.normal-button:link, a.normal-button:visited {
     color: #ECE9E4;
-    cursor: url('static/customcursor.png'), auto;
+    cursor: url('../static/customcursor.png'), auto;
 }
 
 a.all-projects-link:link, a.all-projects-link:visited {
-    color: #F59E0B;
-    cursor: url('static/customcursor.png'), auto;
+    color: #0bf5a3;
+    cursor: url('../static/customcursor.png'), auto;
 }
 
+a.footer-button-primary:link, a.footer-button-primary:visited {
+    color: #0F1117;
+    cursor: url('../static/customcursor1.png'), auto;
+}
 
 .navbar-link.active {
-    color: #F59E0B;
+    color: #0bf5a3;
     font-weight: 500;
 }
 
@@ -85,7 +89,7 @@ a.all-projects-link:link, a.all-projects-link:visited {
     margin: 0;
 }
 
-.larger-h3 {
+.larger-h2 {
     font-size: clamp(0.1rem, 1.2vw + .5rem, 3rem);
     padding: 0;
     margin: 1rem 0rem;
@@ -111,7 +115,7 @@ a.all-projects-link:link, a.all-projects-link:visited {
 }
 
 .accent {
-    color: #F59E0B;
+    color: #0bf5a3;
 }
 
 .muted, .paragraph-muted {
@@ -138,7 +142,7 @@ em {
     justify-content: center;
     box-sizing: border-box;
 
-    background-color: #F59E0B;
+    background-color: #0bf5a3;
     border: 1px solid #252A36;
     color: #0F1117;
     border-radius: 0.75rem;
@@ -148,7 +152,7 @@ em {
     font-family: "Lexend", sans-serif;
     font-weight: 500;
     font-size: 0.8rem;
-    cursor: url('static/customcursor1.png'), auto;
+    cursor: url('../static/customcursor1.png'), auto;
 }
 
 .normal-button{
@@ -167,7 +171,7 @@ em {
     font-family: "Lexend", sans-serif;
     font-weight: 500;
     font-size: 0.8rem;
-    cursor: url('static/customcursor.png'), auto;
+    cursor: url('../static/customcursor.png'), auto;
 }
 
 .signal-button {
@@ -196,7 +200,7 @@ em {
 .signal-circle {
     width: 0.5em;
     height: 0.5em;
-    background-color: #34D399;
+    background-color: #0bf5a3;
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -220,7 +224,7 @@ em {
 
 .all-projects-link {
     font-size: 0.75rem;
-    color: #F59E0B; 
+    color: #0bf5a3; 
     text-decoration: none;
     white-space: nowrap;
 }
@@ -329,6 +333,10 @@ em {
     max-width: 15rem;
 }
 
+.skills-hobbies-container {
+    width: 100%;
+}
+
 .skills-section {
     width: 100%;
     padding: 2rem 0;
@@ -363,6 +371,104 @@ em {
     line-height: 1.6;
     color: #ECE9E4;
     margin: 0;
+}
+
+.hobbies-section {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.hobbies-header {
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.1em;
+}
+
+.hobbies-description {
+    margin: 0 0 1.75rem 0;
+    width: 100%;
+    max-width: 32rem;
+
+    color: #8B919E;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.hobby-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+
+    background-color: #161A23;
+    border: 1px solid #252A36;
+    border-radius: 999px;
+
+    color: #ECE9E4;
+    font-size: 0.85rem;
+    font-weight: 350;
+}
+
+.site-footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5rem 5% 4rem 5%;
+}
+
+.footer-content {
+    width: 100%;
+}
+
+.footer-title {
+    margin: 0 0 1rem 0;
+    max-width: 22rem;
+    color: #ECE9E4;
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-weight: 650;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.footer-description {
+    margin: 0 0 2.5rem 0;
+    max-width: 30rem;
+    color: #8B919E;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 3rem;
+
+    border: 1px solid #252A36;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-button-primary {
+    grid-column: 1 / -1;
+    background-color: #0bf5a3;
+    border-color: #0bf5a3;
+    color: #0F1117;
 }
 
 @media (min-width: 768px) {
@@ -429,6 +535,17 @@ em {
         max-width: 15rem;
     }
 
+    .skills-hobbies-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+    }
+
+    .skills-hobbies-break {
+        display: none;
+    }
+
     .skills-section {
         padding: 1rem 0;
     }
@@ -450,6 +567,62 @@ em {
     .skill-description {
         font-size: 1rem;
     }
+
+    .hobbies-section {
+        padding: 1rem 0;
+    }
+
+    .hobbies-header {
+        margin-bottom: 2rem;
+    }
+
+    .hobbies-description {
+        font-size: 0.95rem;
+        max-width: 36rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hobby-tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .site-footer {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas: "title buttons" "description buttons";
+        column-gap: 4rem;
+        align-items: center;
+    }
+
+    .footer-title {
+        grid-area: title;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-description {
+        grid-area: description;
+        margin-bottom: 0;
+        max-width: 42rem;
+    }
+
+    .footer-links {
+        grid-area: buttons;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .footer-button {
+        min-width: 7rem;
+        padding: 0 1.5rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -460,7 +633,7 @@ em {
     }
 
     .accent-button{
-        background-color: #F59E0B;
+        background-color: #0bf5a3;
         border: 1px solid #252A36;
         color: #0F1117;
         border-radius: 0.75rem;
