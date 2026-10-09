@@ -4,9 +4,7 @@ const navLinks = document.querySelectorAll(".navbar a[data-page]");
 async function loadPage(page) {
     const response = await fetch(`pages/${page}.html`);
     const html = await response.text();
-
     content.innerHTML = html;
-
     updateActiveNavLink(page);
 }
 
@@ -22,15 +20,34 @@ function updateActiveNavLink(activePage) {
 
 document.addEventListener("click", event => {
     const link = event.target.closest("a[data-page]");
-
     if (!link) {
         return;
     }
 
     event.preventDefault();
-
     const page = link.dataset.page;
     loadPage(page);
+});
+
+document.addEventListener("click", event => {
+    const filterButton = event.target.closest(".project-filter");
+    if (!filterButton) {
+        return;
+    }
+
+    const filter = filterButton.dataset.filter;
+
+    document.querySelectorAll(".project-filter").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    filterButton.classList.add("active");
+
+    document.querySelectorAll(".projects-page-card").forEach(project => {
+        project.hidden =
+            filter !== "all" &&
+            project.dataset.category !== filter;
+    });
 });
 
 

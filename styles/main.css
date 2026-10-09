@@ -5,10 +5,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    
     margin: 0;
     padding: 0;
-
     background-color: #0F1117;
     color: #ECE9E4;
     font-family: "Lexend", sans-serif;
@@ -23,7 +21,6 @@ body {
     box-sizing: border-box;
     margin-top: 1rem;
     padding: 1rem 5%; 
-    
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -75,6 +72,24 @@ a.all-projects-link:link, a.all-projects-link:visited {
 
 a.footer-button-primary:link, a.footer-button-primary:visited {
     color: #0F1117;
+    cursor: url('../static/customcursor1.png'), auto;
+}
+
+.project-filter:link, .project-filter:visited, .project-filter:hover {
+    cursor: url('../static/customcursor.png'), auto;
+}
+
+a.project-link-accent:link, a.project-link-accent:visited {
+    color: #0F1117;
+    cursor: url('../static/customcursor.png'), auto;
+}
+
+a.project-link:link, a.project-link:visited, a.project-link:hover {
+    color: #ECE9E4;
+    cursor: url('../static/customcursor.png'), auto;
+}
+
+a.project-link-accent:hover {
     cursor: url('../static/customcursor1.png'), auto;
 }
 
@@ -141,14 +156,12 @@ em {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-
     background-color: #0bf5a3;
     border: 1px solid #252A36;
     color: #0F1117;
     border-radius: 0.75rem;
     height: 2rem;
     width: 8rem;
-
     font-family: "Lexend", sans-serif;
     font-weight: 500;
     font-size: 0.8rem;
@@ -160,14 +173,12 @@ em {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-
     background-color: #0F1117;
     border: 1px solid #252A36;
     color: #ECE9E4;
     border-radius: 0.75rem;
     height: 2rem;
     width: 5rem;
-
     font-family: "Lexend", sans-serif;
     font-weight: 500;
     font-size: 0.8rem;
@@ -179,16 +190,13 @@ em {
     border: .5px solid #252A36;
     color: #ECE9E4;
     border-radius: 0.75rem;
-
     min-height: 1.2rem;
     width: auto;
     padding: 0.3rem 0.8rem;
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-
     font-family: "JetBrains Mono", monospace;
     font-weight: 100;
     font-style: normal;
@@ -301,10 +309,8 @@ em {
     display: grid;
     grid-template-columns: 40% 60%;
     align-items: center;
-
     width: 100%;
     box-sizing: border-box;
-
     padding: 1.5rem 0;
 }
 
@@ -323,13 +329,10 @@ em {
 .number-description {
     margin: 0;
     padding: 0;
-
     color: #8B919E;
-
     font-size: 0.9rem;
     font-weight: 300;
     line-height: 1.15;
-
     max-width: 15rem;
 }
 
@@ -387,7 +390,6 @@ em {
     margin: 0 0 1.75rem 0;
     width: 100%;
     max-width: 32rem;
-
     color: #8B919E;
     font-size: 1rem;
     font-weight: 300;
@@ -405,11 +407,9 @@ em {
     align-items: center;
     justify-content: center;
     padding: 0.6rem 1rem;
-
     background-color: #161A23;
     border: 1px solid #252A36;
     border-radius: 999px;
-
     color: #ECE9E4;
     font-size: 0.85rem;
     font-weight: 350;
@@ -456,7 +456,6 @@ em {
     justify-content: center;
     box-sizing: border-box;
     min-height: 3rem;
-
     border: 1px solid #252A36;
     border-radius: 0.75rem;
     font-size: 1rem;
@@ -469,6 +468,166 @@ em {
     background-color: #0bf5a3;
     border-color: #0bf5a3;
     color: #0F1117;
+}
+
+.projects-page-title {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+}
+
+.projects-page-description {
+    margin: 0 0 1.25rem;
+    color: #8B919E;
+    line-height: 1.6;
+}
+
+.project-filters {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.project-filter {
+    flex-shrink: 0;
+    padding: 0.5rem 0.9rem;
+    background: none;
+    color: #8B919E;
+    border: 1px solid #252A36;
+    border-radius: 999px;
+}
+
+.project-filter.active {
+    background: #ECE9E4;
+    color: #0F1117;
+}
+
+.projects-page-grid {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.projects-page-card {
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    overflow: hidden;
+    background: #161A23;
+    border: 1px solid #252A36;
+    border-radius: 0.5rem;
+}
+
+.projects-page-image {
+    width: 100%;
+    height: 100%;
+    min-height: 7rem;
+    object-fit: cover;
+}
+
+.projects-page-info {
+    padding: 0.85rem;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    color: #8B919E;
+    font-size: 0.6rem;
+}
+
+.project-stat, .project-featured {
+    color: #0bf5a3;
+}
+
+.projects-page-info h2 {
+    margin: 0 0 0.35rem;
+    font-size: 0.85rem;
+}
+
+.projects-page-info p {
+    margin: 0;
+    color: #8B919E;
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: none;
+    color: #8B919E;
+    font-size: 0.6rem;
+}
+
+.featured-project {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-project .projects-page-image {
+    aspect-ratio: 16 / 9;
+}
+
+.featured-project .projects-page-info {
+    padding: 1rem;
+}
+
+.featured-project h2 {
+    font-size: 1.5rem;
+}
+
+.project-featured {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.6rem;
+}
+
+.featured-project .project-tech {
+    display: block;
+    margin-top: 1.25rem;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.project-link-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #0bf5a3;
+    border: 1px solid #252A36;
+    color: #0F1117;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.85rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor: url('../static/customcursor1.png'), auto;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #0F1117;
+    border: 1px solid #252A36;
+    color: #ECE9E4;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.85rem;
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor: url('../static/customcursor1.png'), auto;
 }
 
 @media (min-width: 768px) {
@@ -623,6 +782,75 @@ em {
         min-width: 7rem;
         padding: 0 1.5rem;
     }
+
+    .projects-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .projects-page-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-page-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-meta {
+        font-size: 1rem;
+    }
+
+    .projects-page-info {
+        padding: 1.25rem;
+    }
+
+    .projects-page-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .projects-page-info p {
+        font-size: 1.1rem;
+    }
+
+    .project-tech {
+        display: block;
+        margin-top: 1rem;
+        font-size: .8rem;
+    }
+
+    .featured-project {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 58% 42%;
+    }
+
+    .featured-project .projects-page-image {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+
+    .featured-project .projects-page-info {
+        padding: 2rem;
+    }
+
+    .project-link-accent, .project-link {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 0.6rem;
+    }
+
+    .project-links {
+        gap: 0.75rem;
+        padding-top: 1.5rem;
+    }
+
+    .featured-project .project-link-accent {
+        padding: 1.2rem 1.8rem;
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -639,7 +867,6 @@ em {
         border-radius: 0.75rem;
         height: 2.5rem;
         width: 10rem;
-        
         font-family: "Lexend", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
@@ -654,11 +881,22 @@ em {
         border-radius: 0.75rem;
         height: 2.5rem;
         width: 6rem;
-        
         font-family: "Lexend", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
         font-size: 1rem;
     }
+
+    .featured-project h2 {
+        font-size: 3rem;
+    }
+
+    .featured-project p {
+        font-size: 2.2rem;
+    }
+}
+
+.projects-page-card[hidden] {
+    display: none;
 }

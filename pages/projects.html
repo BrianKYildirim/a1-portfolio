@@ -11,35 +11,111 @@
 
 <body>
     <section>
-        <h1>Projects</h1>
-        <h2 class="accent">StrivoAI: Career Intelligence Platform</h2>
-        <p>October 2025 - June 2026</p>
-        <p>| <em>TypeScript, React, Supabase, PostgreSQL, Docker, Stripe</em></p>
+        <h1 class="projects-page-title">Projects</h1>
+        <p class="projects-page-description">Systems work and full-stack products. Pick one to read the full write-up.</p>
         
-        <p>Architected a tier-aware, three-call parallel AI pipeline with schema validation, caching, and async fallback, reducing average resume-analysis latency 62% from ~110s to ~42s while keeping estimated cost below $0.10 per analysis.</p>
-        <p>Built and production-hardened 5 AI career workflows across 41 Supabase Edge Functions, adding secure authentication, recoverable background jobs, replay-safe Stripe billing, and a 7-stage CI/CD gate covering 3,000+ automated test cases.</p>
+        <div class="project-filters">
+            <button class="project-filter active" data-filter="all">All 5</button>
+            <button class="project-filter" data-filter="full-stack">Full-stack 2</button>
+            <button class="project-filter" data-filter="systems">Systems 2</button>
+            <button class="project-filter" data-filter="backend">Backend 1</button>
+        </div>
 
-        <h2 class="accent">Minecraft Enchantment Calculator</h2>
-        <p>May 2025 - August 2025</p>
-        <p>| <em>Python, Flask, JavaScript, Tailwind CSS</em></p>
-        <p>Architected a memoized recursive optimizer delivering enchantment sequences in ~20 ms, generating 2.8M+ Google Search Console impressions at 8% CTR.</p>
+        <div class="projects-page-grid">
+            <article class="projects-page-card featured-project" data-category="full-stack">
+                <img class="projects-page-image" src="../static/strivoimg1.jpg" alt="StrivoAI project">
+                <div class="projects-page-info">
+                    <span class="project-featured mono">FEATURED</span>
 
-        <h2 class="accent">Rate Limiter Library</h2>
-        <p>August 2025 - September 2025</p>
-        <p>| <em>C++, C API, CMake, GoogleTest, Google Benchmark</em></p>
-        <p>Engineered a sharded token-bucket rate limiter achieving 7.4M ops/sec (15x faster than Redis baseline) and published as a production C++/C library with CMake, pkg-config, automated tests, and portable CI/CD.</p>
+                    <div class="project-meta mono">
+                        <span>Oct 2025 – Jun 2026</span>
+                        <span class="project-stat">62% faster</span>
+                    </div>
 
-        <h2 class="accent">Image Quality Gate</h2>
-        <p>May 2025 - August 2025</p>
-        <p>| <em>Python, FastAPI, OpenCV, NumPy, Docker</em></p>
-        <p>Built a REST microservice for blur and brightness validation sustaining 100+ requests/sec at 30-60 ms median latency.</p>
-        <p>Added Prometheus observability, Docker packaging, and GitHub Actions CI/CD for reliable deployment.</p>
+                    <h2>StrivoAI: Career Intelligence Platform</h2>
+                    <p>AI resume analysis and five career workflows, cut from ~110s to ~42s per analysis at under $0.10 each.</p>
+                    <span class="project-tech mono">TypeScript · React · Supabase · PostgreSQL · Stripe</span>
+                    
+                    <div class="project-links">
+                        <a href="https://strivoai.net/" target="_blank" rel="noopener noreferrer" class="project-link-accent">Try it here!</a>
+                    </div>
+                </div>
+            </article>
 
-        <h2 class="accent">Concurrent Key-Value Server</h2>
-        <p>March 2025 - April 2025</p>
-        <p>| <em>Python, TCP Sockets, Multithreading, File I/O</em></p>
-        <p>Built a multithreaded TCP client-server key-value store with a custom SET/GET/REMOVE/PRINT protocol; protected shared state with threading.RLock and persisted data across restarts.</p>
+            <article class="projects-page-card" data-category="full-stack">
+                <img class="projects-page-image" src="../static/minecraft-enchant1.jpeg" alt="Minecraft Enchantment Calculator">
+                <div class="projects-page-info">
+                    <div class="project-meta mono">
+                        <span>May – Aug 2025</span>
+                        <span class="project-stat">2.8M+ impressions</span>
+                    </div>
+                    <h2>Minecraft Enchantment Calculator</h2>
+                    <p>A memoized recursive optimizer that finds the cheapest enchantment order in ~20 ms.</p>
+                    <span class="project-tech mono">Python · Flask · JavaScript · Tailwind</span>
+                    
+                    <div class="project-links">
+                        <a href="https://minecraft-enchantment-order.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-accent">Try it here!</a>
+                        <a href="https://github.com/BrianKYildirim/minecraft-enchantment-order" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projects-page-card" data-category="systems">
+                <img class="projects-page-image" src="../static/ratelimit.jpg" alt="Rate Limiter Library">
+                <div class="projects-page-info">
+                    <div class="project-meta mono">
+                        <span>Aug – Sep 2025</span>
+                        <span class="project-stat">75.7M ops/s</span>
+                    </div>
+                    <h2>Rate Limiter Library</h2>
+                    <p>A sharded token-bucket limiter, achieving 40ns processing latency (up to 375× faster than Redis).</p>
+                    <span class="project-tech mono">C++ · C API · CMake · GoogleTest</span>
+                
+                    <div class="project-links">
+                        <a href="https://github.com/BrianKYildirim/ratelimit-cpp" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+            </article>
+
+            <article class="projects-page-card" data-category="backend">
+                <img class="projects-page-image" src="../static/imgqual1.jpeg" alt="Image Quality Gate">
+                <div class="projects-page-info">
+                    <div class="project-meta mono">
+                        <span>May – Aug 2025</span>
+                        <span class="project-stat">100+ req/s</span>
+                    </div>
+                    <h2>Image Quality Gate</h2>
+                    <p>A REST microservice that rejects blurry or badly lit uploads.</p>
+                    <span class="project-tech mono">Python · FastAPI · OpenCV · Docker</span>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/BrianKYildirim/image-quality-gate" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projects-page-card" data-category="systems">
+                <img class="projects-page-image" src="../static/tcp1.jpeg" alt="Concurrent Key-Value Server">
+                <div class="projects-page-info">
+                    <div class="project-meta mono">
+                        <span>Mar – Apr 2025</span>
+                        <span class="project-stat">Custom protocol</span>
+                    </div>
+                    <h2>Concurrent Key-Value Server</h2>
+                    <p>A multithreaded TCP key-value store with persistence.</p>
+                    <span class="project-tech mono">Python · TCP Sockets · Threading</span>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/BrianKYildirim/key-value-storage" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="break"></div>
+
     </section>
 </body>
-    
+
 </html>
