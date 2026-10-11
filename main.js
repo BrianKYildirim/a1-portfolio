@@ -50,5 +50,4 @@ document.addEventListener("click", event => {
     });
 });
 
-
 loadPage("about");
