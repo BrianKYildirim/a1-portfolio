@@ -1,12 +1,12 @@
-# Brian Yildirim — Personal Portfolio
+# Brian Yildirim: Personal Portfolio
 
-A responsive personal portfolio website for **Brian Kasim Yildirim**, a software engineer focused on systems engineering, backend development, and full-stack applications.
+A responsive personal portfolio website for a software engineer focused on systems engineering, backend development, and full-stack applications.
 
 The portfolio highlights selected projects, professional experience, coursework, technical skills, and ways to get in touch.
 
 ## Live Portfolio
 
-[View the portfolio](https://briankyildirim.github.io/a1-portfolio/)
+[View the portfolio](https://brianyildirim.com/)
 
 ## Features
 
